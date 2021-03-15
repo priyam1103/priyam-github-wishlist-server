@@ -13,13 +13,12 @@ require("./service/routes")(app);
 
 
 mongoose
-  .connect("mongodb+srv://priyam1103:priyam7035@cluster0.gfdwh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true })
+  .connect("mongodb://localhost:27017/gitapp", { useNewUrlParser: true })
   .then(() => {
     console.log("db connected");
-  }).then(() => {
-  app.listen(config.PORT, () => {
-    console.log(`Connected to port ${config.PORT}`);
-  });
-}).catch((err)=>{});
+    app.listen(config.PORT, () => {
+      console.log(`Connected to port ${PORT}`);
+    });
+  }).catch((err)=>{});
 
 
