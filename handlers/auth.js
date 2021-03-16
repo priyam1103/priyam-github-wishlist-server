@@ -2,7 +2,6 @@ const User = require("../model/user");
 const bcrypt = require("bcrypt");
 const axios = require("axios");
 const config = require("../service/config");
-const { response } = require("express");
 const SavedUser = require("../model/savedusers");
 
 exports.me = async function (req, res) {
